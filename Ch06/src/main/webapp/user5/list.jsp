@@ -64,6 +64,10 @@
 			<% for(User1VO vo : users){ %>
 			<tr>
 				<td><%= vo.getUid() %></td>
+				<td><%= vo.getUid() %></td>
+				<td><%= vo.getUid() %></td>
+				<td><%= vo.getUid() %></td>
+				<td><%= vo.getUid() %></td>
 				<td><%= vo.getName() %></td>
 				<td><%= vo.getHp() %></td>
 				<td><%= vo.getAge() %></td>
