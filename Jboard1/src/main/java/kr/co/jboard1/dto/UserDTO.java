@@ -1,6 +1,6 @@
-package kr.co.jboard1.vo;
+package kr.co.jboard1.dto;
 
-public class UserVO {
+public class UserDTO {
 	
 	private String uid;
 	private String pass;
@@ -16,6 +16,7 @@ public class UserVO {
 	private String regDate;
 	private String leaveDate;
 
+	
 	public String getUid() {
 		return uid;
 	}

@@ -100,7 +100,7 @@
             </section>
         </main>
         <footer>
-            <p>ⓒcopyright 김병준.com</p>
+            <p>ⓒcopyright .com</p>
         </footer>
     </div>
 </body>

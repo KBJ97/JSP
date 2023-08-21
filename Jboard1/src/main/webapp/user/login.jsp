@@ -1,14 +1,14 @@
-<%@page import="kr.co.jboard1.vo.UserVO"%>
+<%@page import="kr.co.jboard1.dto.UserDTO"%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 	request.setCharacterEncoding("UTF-8");
 	String success = request.getParameter("success");
 	
-	// 현재 사용자 로그인 여부 확인
-	UserVO sessUser = (UserVO) session.getAttribute("sessUser");
+	// 현재 사용자 로그인 여부 확인해서 리스트 이동
+	UserDTO sessUser = (UserDTO) session.getAttribute("sessUser");
 	
 	if(sessUser != null){
-		response.sendRedirect("/Jboard/lis.jsp");
+		response.sendRedirect("/Jboard1/list.jsp");
 		return;
 	}
 %>
@@ -18,7 +18,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/Jboard1/css/style.css">
     <script>
     	const success = <%= success %>;
     	
@@ -42,11 +42,11 @@
                 <form action="/Jboard1/user/loginProc.jsp" method="post">
                     <table border="0">
                         <tr>
-                            <td><img src="../images/login_ico_id.png" alt="아이디"></td>
+                            <td><img src="/Jboard1/images/login_ico_id.png" alt="아이디"></td>
                             <td><input type="text" name="uid" placeholder="아이디 입력"></td>
                         </tr>
                         <tr>
-                            <td><img src="../images/login_ico_pw.png" alt="비밀번호"></td>
+                            <td><img src="/Jboard1/images/login_ico_pw.png" alt="비밀번호"></td>
                             <td><input type="password" name="pass" placeholder="비밀번호 입력"></td>
                         </tr>
                     </table>
@@ -62,7 +62,7 @@
             </section>
         </main>
         <footer>
-            <p>ⓒcopyright 김병준.com</p>
+            <p>ⓒcopyright 김철학.com</p>
         </footer>
     </div>
 </body>
